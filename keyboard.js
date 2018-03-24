@@ -9,8 +9,6 @@ function preload() {
     
     game.load.image('robot', 'assets/sprites/aqua_ball.png' );
     
-    game.load.atlas('bot', 'assets/sprites/running_bot.png');
-    
     game.load.image('movement', 'assets/sprites/ship.png')
 
 }
