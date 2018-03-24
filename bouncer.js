@@ -24,3 +24,11 @@ function create() {
     image.body.bounce.set(1);
 
 }
+
+function update() {
+
+}
+
+function render() {
+
+}
