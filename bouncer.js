@@ -1,6 +1,8 @@
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+
 function preload() {
 
-    game.load.baseURL = 'http://examples.phaser.io/';
+    game.load.baseURL = 'https://examples.phaser.io/';
     game.load.crossOrigin = 'anonymous';
 
     game.load.image('flyer', 'assets/sprites/master.png');
