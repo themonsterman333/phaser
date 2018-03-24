@@ -1,6 +1,8 @@
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+
 function preload() {
 
-    game.load.baseURL = 'http://examples.phaser.io/';
+    game.load.baseURL = 'https://examples.phaser.io/';
     game.load.crossOrigin = 'anonymous';
 
     game.load.image('flyer', 'assets/sprites/aqua_ball.png');
@@ -20,7 +22,8 @@ var downKey;
 var leftKey;
 var rightKey;
 
-game.physics.startSystem(Phaser.Physics.ARCADE);
+function create() {
+    game.physics.startSystem(Phaser.Physics.ARCADE);
     
     flyer = game.add.sprite(0, 0, 'flyer');
     
@@ -52,7 +55,8 @@ game.physics.startSystem(Phaser.Physics.ARCADE);
 
 }
 
-if (upKey.isDown)
+function update() {
+    if (upKey.isDown)
     {
         movement.y = movement.y - 3;
     }
@@ -69,4 +73,8 @@ if (upKey.isDown)
     {
         movement.x = movement.x + 3;
     }
+}
+
+function render() {
+
 }
